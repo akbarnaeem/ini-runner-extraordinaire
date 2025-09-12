@@ -20,7 +20,9 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--primary-vibrant))",
+          vibrant: "hsl(var(--primary-vibrant))",
+          deep: "hsl(var(--primary-deep))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -46,6 +48,27 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          light: "hsl(var(--success-light))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        skill: {
+          DEFAULT: "hsl(var(--skill))",
+          light: "hsl(var(--skill-light))",
+          foreground: "hsl(var(--skill-foreground))",
+        },
+        career: {
+          beginner: "hsl(var(--career-beginner))",
+          intermediate: "hsl(var(--career-intermediate))",
+          advanced: "hsl(var(--career-advanced))",
+          expert: "hsl(var(--career-expert))",
+        },
+        skillCategory: {
+          tech: "hsl(var(--tech-skill))",
+          soft: "hsl(var(--soft-skill))",
+          domain: "hsl(var(--domain-skill))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
