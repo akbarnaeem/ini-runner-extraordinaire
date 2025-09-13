@@ -75,7 +75,7 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Everything You Need for
               <span className="bg-gradient-to-r from-primary to-skill bg-clip-text text-transparent">
                 {" "}Career Success
@@ -114,15 +114,15 @@ const Index = () => {
                 color: "career-intermediate"
               }
             ].map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 elegant-shadow">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border border-border elegant-shadow bg-card">
                 <CardHeader className="pb-4">
-                  <div className={`w-16 h-16 mx-auto bg-accent rounded-full flex items-center justify-center mb-4 border-2 border-primary/20`}>
+                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4 border-2 border-primary/20">
                     <feature.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  <CardTitle className="text-xl text-card-foreground">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed text-muted-foreground">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
@@ -159,7 +159,7 @@ const Index = () => {
 
             <TabsContent value="overview" className="space-y-8">
               <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl font-bold">Your Skills Dashboard</h2>
+                <h2 className="text-3xl font-bold text-foreground">Your Skills Dashboard</h2>
                 <p className="text-muted-foreground text-lg">
                   Track your progress and identify areas for growth
                 </p>
@@ -169,7 +169,7 @@ const Index = () => {
 
             <TabsContent value="quiz" className="space-y-8">
               <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl font-bold">Skill Assessment</h2>
+                <h2 className="text-3xl font-bold text-foreground">Skill Assessment</h2>
                 <p className="text-muted-foreground text-lg">
                   Discover your strengths and get personalized recommendations
                 </p>
@@ -181,7 +181,7 @@ const Index = () => {
 
             <TabsContent value="recommendations" className="space-y-8">
               <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl font-bold">Career Recommendations</h2>
+                <h2 className="text-3xl font-bold text-foreground">Career Recommendations</h2>
                 <p className="text-muted-foreground text-lg">
                   AI-powered career paths tailored to your profile
                 </p>
@@ -191,7 +191,7 @@ const Index = () => {
 
             <TabsContent value="chat" className="space-y-8">
               <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl font-bold">AI Career Advisor</h2>
+                <h2 className="text-3xl font-bold text-foreground">AI Career Advisor</h2>
                 <p className="text-muted-foreground text-lg">
                   Get instant answers to your career questions
                 </p>

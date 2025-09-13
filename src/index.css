@@ -7,18 +7,18 @@
 @layer base {
   :root {
     /* Core Brand Colors - Professional Career Focus */
-    --background: 248 250 252 / 1; /* slate-50 equivalent */
-    --foreground: 15 23 42 / 1; /* slate-800 equivalent */
+    --background: 255 255 255 / 1; /* pure white */
+    --foreground: 15 23 42 / 1; /* slate-800 - dark for contrast */
 
     --card: 255 255 255 / 1;
-    --card-foreground: 15 23 42 / 1;
+    --card-foreground: 15 23 42 / 1; /* dark text on white cards */
 
     --popover: 255 255 255 / 1;
     --popover-foreground: 15 23 42 / 1;
 
     /* Career Growth Primary - Professional Blue */
-    --primary: 59 130 246 / 1; /* blue-500 - better contrast */
-    --primary-vibrant: 37 99 235 / 1; /* blue-600 */
+    --primary: 37 99 235 / 1; /* blue-600 - strong blue */
+    --primary-vibrant: 29 78 216 / 1; /* blue-700 */
     --primary-deep: 30 64 175 / 1; /* blue-700 */
     --primary-foreground: 255 255 255 / 1;
 
@@ -41,10 +41,10 @@
     --secondary-foreground: 30 41 59 / 1; /* darker for better contrast */
 
     --muted: 248 250 252 / 1; /* slate-50 */
-    --muted-foreground: 100 116 139 / 1; /* slate-500 */
+    --muted-foreground: 71 85 105 / 1; /* slate-600 - darker for better contrast */
 
-    --accent: 239 246 255 / 1; /* blue-50 */
-    --accent-foreground: 30 64 175 / 1; /* blue-700 */
+    --accent: 241 245 249 / 1; /* slate-100 */
+    --accent-foreground: 15 23 42 / 1; /* dark text */
 
     --destructive: 239 68 68 / 1; /* red-500 */
     --destructive-foreground: 255 255 255 / 1;
