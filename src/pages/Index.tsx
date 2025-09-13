@@ -29,10 +29,9 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient opacity-90"></div>
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-primary via-primary-deep to-foreground">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{ backgroundImage: `url(${heroImage})` }}
         ></div>
         
@@ -51,7 +50,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto"
+                className="bg-white text-foreground hover:bg-white/90 text-lg px-8 py-6 h-auto border-2 border-white"
                 onClick={() => setActiveTab('quiz')}
               >
                 <Play className="mr-2 h-5 w-5" />
@@ -60,7 +59,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 h-auto"
+                className="border-2 border-white text-white hover:bg-white hover:text-foreground text-lg px-8 py-6 h-auto"
                 onClick={() => setActiveTab('chat')}
               >
                 <MessageSquare className="mr-2 h-5 w-5" />

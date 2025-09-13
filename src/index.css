@@ -6,137 +6,131 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors - Professional Career Focus */
-    --background: 255 255 255 / 1; /* pure white */
-    --foreground: 15 23 42 / 1; /* slate-800 - dark for contrast */
+    /* Black and Blue Theme - High Contrast */
+    --background: 0 0% 100%; /* pure white */
+    --foreground: 0 0% 9%; /* almost black */
 
-    --card: 255 255 255 / 1;
-    --card-foreground: 15 23 42 / 1; /* dark text on white cards */
+    --card: 0 0% 100%; /* white cards */
+    --card-foreground: 0 0% 9%; /* black text */
 
-    --popover: 255 255 255 / 1;
-    --popover-foreground: 15 23 42 / 1;
+    --popover: 0 0% 100%; /* white popover */
+    --popover-foreground: 0 0% 9%; /* black text */
 
-    /* Career Growth Primary - Professional Blue */
-    --primary: 37 99 235 / 1; /* blue-600 - strong blue */
-    --primary-vibrant: 29 78 216 / 1; /* blue-700 */
-    --primary-deep: 30 64 175 / 1; /* blue-700 */
-    --primary-foreground: 255 255 255 / 1;
+    /* Primary Blue Colors */
+    --primary: 221 83% 53%; /* strong blue #2563eb */
+    --primary-vibrant: 221 83% 53%; /* same strong blue */
+    --primary-deep: 221 83% 40%; /* darker blue */
+    --primary-foreground: 0 0% 100%; /* white text */
 
-    /* Success & Growth - Emerald Green */
-    --success: 34 197 94 / 1; /* emerald-500 */
-    --success-light: 167 243 208 / 1; /* emerald-200 */
-    --success-foreground: 255 255 255 / 1;
+    /* Success & Growth */
+    --success: 142 76% 36%; /* green */
+    --success-light: 142 69% 58%; /* lighter green */
+    --success-foreground: 0 0% 100%; /* white text */
 
-    /* Skills & Learning - Purple */
-    --skill: 139 92 246 / 1; /* violet-500 */
-    --skill-light: 196 181 253 / 1; /* violet-300 */
-    --skill-foreground: 255 255 255 / 1;
+    /* Skills & Learning */
+    --skill: 262 83% 58%; /* purple */
+    --skill-light: 262 69% 70%; /* lighter purple */
+    --skill-foreground: 0 0% 100%; /* white text */
 
-    /* Career Progress - Gradient Colors */
-    --progress-start: 59 130 246 / 1; /* blue-500 */
-    --progress-mid: 139 92 246 / 1; /* violet-500 */
-    --progress-end: 236 72 153 / 1; /* pink-500 */
+    /* Neutral Colors */
+    --secondary: 210 40% 95%; /* light gray */
+    --secondary-foreground: 0 0% 9%; /* black text */
 
-    --secondary: 241 245 249 / 1; /* slate-100 */
-    --secondary-foreground: 30 41 59 / 1; /* darker for better contrast */
+    --muted: 210 40% 98%; /* very light gray */
+    --muted-foreground: 215 16% 47%; /* gray text */
 
-    --muted: 248 250 252 / 1; /* slate-50 */
-    --muted-foreground: 71 85 105 / 1; /* slate-600 - darker for better contrast */
+    --accent: 210 40% 95%; /* light gray */
+    --accent-foreground: 0 0% 9%; /* black text */
 
-    --accent: 241 245 249 / 1; /* slate-100 */
-    --accent-foreground: 15 23 42 / 1; /* dark text */
+    --destructive: 0 84% 60%; /* red */
+    --destructive-foreground: 0 0% 100%; /* white text */
 
-    --destructive: 239 68 68 / 1; /* red-500 */
-    --destructive-foreground: 255 255 255 / 1;
+    --border: 214 32% 91%; /* light border */
+    --input: 214 32% 91%; /* light input background */
+    --ring: 221 83% 53%; /* blue ring */
 
-    --border: 226 232 240 / 1; /* slate-200 */
-    --input: 241 245 249 / 1; /* slate-100 */
-    --ring: 59 130 246 / 1; /* blue-500 */
-
-    /* Career Platform Specific Colors */
-    --career-beginner: 34 197 94 / 1; /* emerald-500 */
-    --career-intermediate: 245 158 11 / 1; /* amber-500 */
-    --career-advanced: 239 68 68 / 1; /* red-500 */
-    --career-expert: 139 92 246 / 1; /* violet-500 */
+    /* Career Level Colors */
+    --career-beginner: 142 76% 36%; /* green */
+    --career-intermediate: 43 96% 56%; /* yellow */
+    --career-advanced: 25 95% 53%; /* orange */
+    --career-expert: 262 83% 58%; /* purple */
 
     /* Skill Category Colors */
-    --tech-skill: 59 130 246 / 1; /* blue-500 */
-    --soft-skill: 139 92 246 / 1; /* violet-500 */
-    --domain-skill: 236 72 153 / 1; /* pink-500 */
+    --tech-skill: 221 83% 53%; /* blue */
+    --soft-skill: 262 83% 58%; /* purple */
+    --domain-skill: 336 84% 57%; /* pink */
 
-    /* Gradients */
-    --gradient-career: linear-gradient(135deg, hsl(var(--progress-start)), hsl(var(--progress-mid)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-vibrant)), hsl(var(--skill)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
-    --gradient-skill: linear-gradient(135deg, hsl(var(--skill)), hsl(var(--skill-light)));
+    /* Simple Gradients - No HSL wrapping needed */
+    --gradient-career: linear-gradient(135deg, #2563eb, #8b5cf6);
+    --gradient-hero: linear-gradient(135deg, #2563eb, #000000);
+    --gradient-success: linear-gradient(135deg, #059669, #34d399);
+    --gradient-skill: linear-gradient(135deg, #8b5cf6, #a78bfa);
 
     /* Shadows */
-    --shadow-career: 0 10px 25px -5px hsl(var(--primary-vibrant) / 0.1), 0 4px 6px -2px hsl(var(--primary-vibrant) / 0.05);
-    --shadow-skill: 0 10px 25px -5px hsl(var(--skill) / 0.1), 0 4px 6px -2px hsl(var(--skill) / 0.05);
-    --shadow-elegant: 0 20px 25px -5px hsl(15 23 42 / 0.1), 0 10px 10px -5px hsl(15 23 42 / 0.04);
+    --shadow-career: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+    --shadow-skill: 0 10px 25px -5px rgba(139, 92, 246, 0.1), 0 4px 6px -2px rgba(139, 92, 246, 0.05);
+    --shadow-elegant: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
     --radius: 0.75rem;
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 95%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 221 83% 53%;
   }
 
   .dark {
-    --background: 2 6 23 / 1; /* slate-900 */
-    --foreground: 248 250 252 / 1; /* slate-50 */
+    /* Dark Theme - Black background with blue accents */
+    --background: 0 0% 9%; /* almost black */
+    --foreground: 0 0% 98%; /* almost white */
 
-    --card: 15 23 42 / 1; /* slate-800 */
-    --card-foreground: 248 250 252 / 1;
+    --card: 0 0% 13%; /* dark gray cards */
+    --card-foreground: 0 0% 98%; /* white text */
 
-    --popover: 15 23 42 / 1;
-    --popover-foreground: 248 250 252 / 1;
+    --popover: 0 0% 13%; /* dark popover */
+    --popover-foreground: 0 0% 98%; /* white text */
 
-    --primary-vibrant: 96 165 250 / 1; /* blue-400 */
-    --primary-deep: 147 197 253 / 1; /* blue-300 */
-    --primary-foreground: 2 6 23 / 1;
+    --primary: 221 83% 60%; /* lighter blue for dark theme */
+    --primary-vibrant: 221 83% 60%;
+    --primary-deep: 221 83% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --success: 52 211 153 / 1; /* emerald-400 */
-    --success-light: 110 231 183 / 1; /* emerald-300 */
+    --success: 142 69% 58%; /* lighter green */
+    --success-light: 142 76% 70%;
 
-    --skill: 167 139 250 / 1; /* violet-400 */
-    --skill-light: 196 181 253 / 1; /* violet-300 */
+    --skill: 262 69% 70%; /* lighter purple */
+    --skill-light: 262 60% 80%;
 
-    --secondary: 30 41 59 / 1; /* slate-700 */
-    --secondary-foreground: 248 250 252 / 1;
+    --secondary: 0 0% 20%; /* dark gray */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 15 23 42 / 1; /* slate-800 */
-    --muted-foreground: 148 163 184 / 1; /* slate-400 */
+    --muted: 0 0% 15%; /* darker gray */
+    --muted-foreground: 215 16% 65%; /* lighter gray text */
 
-    --accent: 30 41 59 / 1; /* slate-700 */
-    --accent-foreground: 248 250 252 / 1;
+    --accent: 0 0% 20%; /* dark gray */
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 248 113 113 / 1; /* red-400 */
-    --destructive-foreground: 248 250 252 / 1;
+    --destructive: 0 84% 70%; /* lighter red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 41 59 / 1; /* slate-700 */
-    --input: 30 41 59 / 1;
-    --ring: 96 165 250 / 1; /* blue-400 */
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 0 0% 20%; /* dark border */
+    --input: 0 0% 20%;
+    --ring: 221 83% 60%;
+
+    /* Sidebar dark theme */
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 221 83% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 221 83% 60%;
   }
 }
 
