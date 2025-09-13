@@ -38,7 +38,7 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({
   };
 
   const getColorClass = () => {
-    if (variant === 'outline') return '';
+    if (variant === 'outline') return 'border-primary text-primary hover:bg-primary hover:text-primary-foreground';
     return category ? categoryColors[category] : levelColors[level];
   };
 
@@ -46,8 +46,8 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({
     <Badge 
       variant={variant}
       className={cn(
-        "transition-smooth text-white border-0",
-        getColorClass(),
+        "transition-smooth border-0",
+        variant === 'outline' ? getColorClass() : `${getColorClass()} text-white`,
         className
       )}
     >

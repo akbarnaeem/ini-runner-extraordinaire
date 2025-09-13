@@ -17,8 +17,8 @@
     --popover-foreground: 15 23 42 / 1;
 
     /* Career Growth Primary - Professional Blue */
-    --primary: 219 234 254 / 1; /* blue-100 base */
-    --primary-vibrant: 59 130 246 / 1; /* blue-500 */
+    --primary: 59 130 246 / 1; /* blue-500 - better contrast */
+    --primary-vibrant: 37 99 235 / 1; /* blue-600 */
     --primary-deep: 30 64 175 / 1; /* blue-700 */
     --primary-foreground: 255 255 255 / 1;
 
@@ -38,12 +38,12 @@
     --progress-end: 236 72 153 / 1; /* pink-500 */
 
     --secondary: 241 245 249 / 1; /* slate-100 */
-    --secondary-foreground: 15 23 42 / 1;
+    --secondary-foreground: 30 41 59 / 1; /* darker for better contrast */
 
     --muted: 248 250 252 / 1; /* slate-50 */
     --muted-foreground: 100 116 139 / 1; /* slate-500 */
 
-    --accent: 219 234 254 / 1; /* blue-100 */
+    --accent: 239 246 255 / 1; /* blue-50 */
     --accent-foreground: 30 64 175 / 1; /* blue-700 */
 
     --destructive: 239 68 68 / 1; /* red-500 */

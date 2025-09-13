@@ -116,8 +116,8 @@ const Index = () => {
             ].map((feature, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 elegant-shadow">
                 <CardHeader className="pb-4">
-                  <div className={`w-16 h-16 mx-auto bg-${feature.color}/10 rounded-full flex items-center justify-center mb-4`}>
-                    <feature.icon className={`h-8 w-8 text-${feature.color}`} />
+                  <div className={`w-16 h-16 mx-auto bg-accent rounded-full flex items-center justify-center mb-4 border-2 border-primary/20`}>
+                    <feature.icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
