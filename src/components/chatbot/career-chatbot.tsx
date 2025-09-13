@@ -140,24 +140,24 @@ export const CareerChatbot: React.FC<CareerChatbotProps> = ({ className }) => {
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="flex-1 flex flex-col space-y-4 p-4">
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-4 pr-2">
+      <CardContent className="flex-1 flex flex-col space-y-4 p-4 min-h-0">
+        {/* Messages Container with proper scrolling */}
+        <div className="flex-1 overflow-y-auto overflow-x-hidden space-y-4 pr-2 min-h-0 max-h-full">
           {messages.map((message) => (
-            <div key={message.id} className="space-y-2">
-              <div className={`flex items-start space-x-3 ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                <Avatar className="w-8 h-8">
+            <div key={message.id} className="space-y-2 w-full">
+              <div className={`flex items-start space-x-3 w-full ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                <Avatar className="w-8 h-8 flex-shrink-0">
                   <AvatarFallback className={message.sender === 'bot' ? 'bg-skill text-white' : 'bg-primary text-white'}>
                     {message.sender === 'bot' ? <Bot className="h-4 w-4" /> : <User className="h-4 w-4" />}
                   </AvatarFallback>
                 </Avatar>
                 
-                <div className={`max-w-[80%] p-3 rounded-lg ${
+                <div className={`max-w-[75%] min-w-0 p-3 rounded-lg break-words ${
                   message.sender === 'user' 
-                    ? 'bg-primary text-primary-foreground ml-auto' 
-                    : 'bg-muted'
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'bg-muted text-muted-foreground'
                 }`}>
-                  <div className="whitespace-pre-wrap text-sm leading-relaxed">
+                  <div className="whitespace-pre-wrap text-sm leading-relaxed break-words">
                     {message.text}
                   </div>
                 </div>
@@ -165,14 +165,14 @@ export const CareerChatbot: React.FC<CareerChatbotProps> = ({ className }) => {
 
               {/* Suggestions */}
               {message.suggestions && (
-                <div className="flex flex-wrap gap-2 ml-11">
+                <div className="flex flex-wrap gap-2 ml-11 max-w-[75%]">
                   {message.suggestions.map((suggestion, index) => (
                     <Button
                       key={index}
                       variant="outline"
                       size="sm"
                       onClick={() => handleSuggestionClick(suggestion)}
-                      className="text-xs border-skill/30 text-skill hover:bg-skill hover:text-white transition-colors"
+                      className="text-xs border-skill/30 text-skill hover:bg-skill hover:text-white transition-colors whitespace-nowrap"
                     >
                       {suggestion}
                     </Button>
@@ -184,13 +184,13 @@ export const CareerChatbot: React.FC<CareerChatbotProps> = ({ className }) => {
 
           {/* Typing indicator */}
           {isTyping && (
-            <div className="flex items-start space-x-3">
-              <Avatar className="w-8 h-8">
+            <div className="flex items-start space-x-3 w-full">
+              <Avatar className="w-8 h-8 flex-shrink-0">
                 <AvatarFallback className="bg-skill text-white">
                   <Bot className="h-4 w-4" />
                 </AvatarFallback>
               </Avatar>
-              <div className="bg-muted p-3 rounded-lg">
+              <div className="bg-muted text-muted-foreground p-3 rounded-lg">
                 <div className="flex space-x-1">
                   <div className="w-2 h-2 bg-skill rounded-full animate-bounce"></div>
                   <div className="w-2 h-2 bg-skill rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -203,19 +203,19 @@ export const CareerChatbot: React.FC<CareerChatbotProps> = ({ className }) => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input */}
-        <div className="flex space-x-2">
+        {/* Input Section */}
+        <div className="flex space-x-2 border-t border-border pt-4">
           <Input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Ask me about careers, skills, or learning paths..."
-            className="flex-1"
+            className="flex-1 min-w-0"
           />
           <Button 
             onClick={handleSend} 
             disabled={!inputValue.trim() || isTyping}
-            className="skill-gradient text-white border-0 hover:opacity-90"
+            className="bg-skill hover:bg-skill/90 text-white border-0 flex-shrink-0"
           >
             <Send className="h-4 w-4" />
           </Button>
